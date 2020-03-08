@@ -1,5 +1,6 @@
 package xyz.sweepingloutus.welcomeonjoin;
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -19,12 +20,12 @@ public class JoinListener implements Listener {
     public void onPlayerJoin(PlayerJoinEvent e){
         if (Bukkit.getPluginManager().getPlugin("PlaceholderAPI") != null){
             FileConfiguration config = main.getConfig();
-            String ConfigMessage = config.getString("message");
+            String ConfigMessage = config.getString(ChatColor.translateAlternateColorCodes('&', config.getString("message-on-join")));
             String joinmessage = PlaceholderAPI.setPlaceholders(e.getPlayer(), ConfigMessage);
             e.setJoinMessage(joinmessage);
         }else{
             FileConfiguration config = main.getConfig();
-            String ConfigMessage = config.getString("message");
+            String ConfigMessage = config.getString(ChatColor.translateAlternateColorCodes('&', config.getString("message-on-join")));
             e.setJoinMessage(ConfigMessage);
         }
     }

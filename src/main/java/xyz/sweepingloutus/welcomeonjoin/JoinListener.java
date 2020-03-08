@@ -28,5 +28,5 @@ public class JoinListener implements Listener {
             String ConfigMessage = config.getString(ChatColor.translateAlternateColorCodes('&', config.getString("message-on-join")));
             e.setJoinMessage(ConfigMessage);
         }
-    }
+    }  
 }

@@ -1,0 +1,13 @@
+name: WelcomeOnJoin
+version: 1.0.0
+author: SweepingLoutus
+main: xyz.sweepingloutus.welcomeonjoin.WelcomeOnJoin
+api-version: 1.8.8
+
+softdepend: [PlaceholderAPI]
+
+commands:
+  wojreload:
+    description: Reloads the config.yml file.
+    usage: /wojreload
+    permission: welcomeonjoin.reload

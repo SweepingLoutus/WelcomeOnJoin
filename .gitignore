@@ -2,3 +2,9 @@
 /.gradle/
 /build/
 /build/classes/java/main/
+*.xml
+gradlew.bat
+settings.gradle
+gradlew
+gradle/wrapper/gradle-wrapper.properties
+gradle/wrapper/gradle-wrapper.jar
